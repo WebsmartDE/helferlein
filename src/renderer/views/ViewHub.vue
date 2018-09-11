@@ -7,6 +7,7 @@
 
 <script>
   import { remote } from 'electron';
+  import openurl from 'openurl';
 
   export default {
     name: 'view-hub',
@@ -18,15 +19,21 @@
       checkForUpdates: function() {
         var currentVersion = remote.app.getVersion();
 
-        let updateNotification = new Notification('Update verfügbar', {
-          body: 'Ein Update ist verfügbar, klicke hier um es herunter zu laden!'
-        });
+        // Check GitHub for newest release
+        fetch('https://api.github.com/repos/AndreasWebdev/helferlein/releases/latest')
+          .then(function(response) {
+            return response.json();
+          }).then(function(data) {
+            if(currentVersion != data.tag_name) {
+              let updateNotification = new Notification('Update verfügbar', {
+                body: 'Ein Update ist verfügbar, klicke hier um es herunter zu laden!'
+              });
 
-        console.log();
-
-        updateNotification.onclick = () => {
-          console.log('Clicked');
-        }
+              updateNotification.onclick = () => {
+                openurl.open(data.assets[0].browser_download_url);
+              }
+            }
+          });
       }
     }
   }
