@@ -4,7 +4,7 @@
       <div class="item">
         <div class="header"><span>VERSION</span></div>
         <div class="box">
-          <div class="versionNumber">2.1.0</div>
+          <div class="versionNumber">2.1.1</div>
           <div class="versionCode">Luminous Path</div>
         </div>
       </div>
@@ -15,6 +15,7 @@
             <li>Automatisches Update</li>
             <li>Beschreibung und Keywords getauscht</li>
             <li>Löschen Button eingefügt</li>
+            <li>Wörter werden nun richtiger gezählt</li>
           </ul>
         </div>
       </div>
