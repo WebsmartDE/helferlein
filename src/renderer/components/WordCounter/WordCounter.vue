@@ -111,7 +111,11 @@
         else { this.counterLengthRating = 0; }
 
         if(this.type == 'tags') {
-          this.counterAmount = this.counterText.split(",").length;
+          if(this.counterText != "") {
+            this.counterAmount = this.counterText.split(",").length;
+          } else {
+            this.counterAmount = 0;
+          }
           if(this.counterAmount <= this.counterAmountMin - 1) { this.counterAmountRating = -1; }
           else if(this.counterAmount >= this.counterAmountMax + 1) { this.counterAmountRating = 1; }
           else { this.counterAmountRating = 0; }
