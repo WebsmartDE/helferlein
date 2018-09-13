@@ -12,47 +12,24 @@
 </template>
 
 <script>
-  import { remote } from 'electron';
   import openurl from 'openurl';
 
   export default {
     name: 'updateprompt-updateprompt',
     props: ['url', 'version'],
     components: {},
-    mounted: function() {
-      this.checkForUpdates();
-    },
-    data: function() {
-      return {
-        newVersion: "",
-        newVersionUrl: "",
-      }
-    },
     methods: {
       openUrl: function() {
-        openurl.open(this.newVersionUrl);
+        openurl.open( this.url );
       },
-      checkForUpdates: function() {
-        var currentVersion = remote.app.getVersion();
+    },
+    mounted: function() {
+      let updateNotification = new Notification('Update verfügbar', {
+        body: 'Ein Update ist verfügbar, klicke hier um es herunter zu laden!'
+      });
 
-        // Check GitHub for newest release
-        fetch('https://api.github.com/repos/AndreasWebdev/helferlein/releases/latest')
-          .then(function(response) {
-            return response.json();
-          }).then(function(data) {
-            if(currentVersion != data.tag_name) {
-              this.newVersion = data.tag_name;
-              this.newVersionUrl = data.assets[0].browser_download_url;
-
-              let updateNotification = new Notification('Update verfügbar', {
-                body: 'Ein Update ist verfügbar, klicke hier um es herunter zu laden!'
-              });
-
-              updateNotification.onclick = () => {
-                this.openUrl();
-              }
-            }
-          }.bind(this));
+      updateNotification.onclick = () => {
+        this.openUrl();
       }
     }
   }
