@@ -1,6 +1,6 @@
 {
   "name": "helferlein",
-  "version": "2.1.4",
+  "version": "2.1.2",
   "author": "Andreas Heimann <marketing@andreas-heimann.com>",
   "description": "Helferlein Tool",
   "license": null,
@@ -55,6 +55,7 @@
     }
   },
   "dependencies": {
+    "electron-fetch": "^1.2.1",
     "openurl": "^1.1.1",
     "vue": "^2.3.3",
     "vue-electron": "^1.0.6",
