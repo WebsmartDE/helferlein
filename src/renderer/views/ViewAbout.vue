@@ -4,7 +4,7 @@
       <div class="item">
         <div class="header"><span>VERSION</span></div>
         <div class="box">
-          <div class="versionNumber">2.1.1</div>
+          <div class="versionNumber">2.1.2</div>
           <div class="versionCode">Luminous Path</div>
         </div>
       </div>
