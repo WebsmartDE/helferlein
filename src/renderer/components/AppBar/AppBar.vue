@@ -3,7 +3,7 @@
     <div class="header-main">
       <div class="header-title">
         <span>Helferlein</span>
-        <div class="version">v2.1.2</div>
+        <div class="version">v2.2.0</div>
       </div>
 
       <aside>
