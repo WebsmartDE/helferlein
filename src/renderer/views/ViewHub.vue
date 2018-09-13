@@ -1,40 +1,21 @@
 <template>
   <div class="view">
-    <p>Dies ist Helferlein (früher Helferlein Tool), eine App um Bereiche der Produktion zu erleichtern. Neben einfachen Verlinkungen auf verschiedenste Projekte wie Google PageSpeed und Adobe Color CC gibt es zudem auch wertvolle SEO Tools wie den Wortzähler um deine Arbeit etwas zu erleichtern.</p>
-    <p>Dieses Projekt ist in stetiger Entwicklung. Solltest du dir weitere Funktionen wünschen oder Fehler auftreten, kannst dich an der unter "Über diese App" verlinkten E-Mail-Adresse wenden.</p>
+    <!-- <p>Dies ist Helferlein (früher Helferlein Tool), eine App um Bereiche der Produktion zu erleichtern. Neben einfachen Verlinkungen auf verschiedenste Projekte wie Google PageSpeed und Adobe Color CC gibt es zudem auch wertvolle SEO Tools wie den Wortzähler um deine Arbeit etwas zu erleichtern.</p>
+    <p>Dieses Projekt ist in stetiger Entwicklung. Solltest du dir weitere Funktionen wünschen oder Fehler auftreten, kannst dich an der unter "Über diese App" verlinkten E-Mail-Adresse wenden.</p> -->
+
+    <UpdatePrompt url="http://google.de" version="2.1.1" />
   </div>
 </template>
 
 <script>
-  import { remote } from 'electron';
-  import openurl from 'openurl';
+  import UpdatePrompt from '@/components/UpdatePrompt/UpdatePrompt';
 
   export default {
     name: 'view-hub',
-    components: {},
-    mounted: function() {
-      this.checkForUpdates();
+    components: {
+      UpdatePrompt
     },
     methods: {
-      checkForUpdates: function() {
-        var currentVersion = remote.app.getVersion();
-
-        // Check GitHub for newest release
-        fetch('https://api.github.com/repos/AndreasWebdev/helferlein/releases/latest')
-          .then(function(response) {
-            return response.json();
-          }).then(function(data) {
-            if(currentVersion != data.tag_name) {
-              let updateNotification = new Notification('Update verfügbar', {
-                body: 'Ein Update ist verfügbar, klicke hier um es herunter zu laden!'
-              });
-
-              updateNotification.onclick = () => {
-                openurl.open(data.assets[0].browser_download_url);
-              }
-            }
-          });
-      }
     }
   }
 </script>

@@ -47,6 +47,9 @@ main {
   overflow-y: auto;
   overflow-x: hidden;
 }
+.view {
+  min-height: 100%;
+}
 a {
   text-decoration: none;
   color: inherit;
