@@ -4,18 +4,15 @@
       <div class="item">
         <div class="header"><span>VERSION</span></div>
         <div class="box">
-          <div class="versionNumber">2.2.0</div>
-          <div class="versionCode">Luminous Path</div>
+          <div class="versionNumber">2.3.0</div>
+          <div class="versionCode">Lambent Beat</div>
         </div>
       </div>
       <div class="item">
         <div class="header"><span>CHANGELOG</span></div>
         <div class="box">
           <ul>
-            <li>Automatisches Update</li>
-            <li>Beschreibung und Keywords getauscht</li>
-            <li>Löschen Button eingefügt</li>
-            <li>Wörter werden nun richtiger gezählt</li>
+            <li>AlwaysOnTop Funktion</li>
           </ul>
         </div>
       </div>
