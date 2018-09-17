@@ -3,10 +3,11 @@
     <div class="header-main">
       <div class="header-title">
         <span>Helferlein</span>
-        <div class="version">v2.2.0</div>
+        <div class="version">v2.3.0</div>
       </div>
 
       <aside>
+        <AppBarToggleOnTopIcon icon="vector-arrange-above" tooltip="Immer über andere Fenster anzeigen" />
         <AppBarIcon icon="information" tooltip="Über diese App" route="view-about" />
       </aside>
     </div>
@@ -22,12 +23,14 @@
 
 <script>
   import AppBarIcon from '@/components/AppBar/AppBarIcon';
+  import AppBarToggleOnTopIcon from '@/components/AppBar/AppBarToggleOnTopIcon';
   import AppBarNavItem from '@/components/AppBar/AppBarNavItem';
 
   export default {
     name: 'appbar-appbar',
     components: {
       AppBarIcon,
+      AppBarToggleOnTopIcon,
       AppBarNavItem
     }
   }
