@@ -4,7 +4,7 @@
       <div class="item">
         <div class="header"><span>VERSION</span></div>
         <div class="box">
-          <div class="versionNumber">2.3.0</div>
+          <div class="versionNumber">2.4.0</div>
           <div class="versionCode">Lambent Beat</div>
         </div>
       </div>
@@ -12,7 +12,7 @@
         <div class="header"><span>CHANGELOG</span></div>
         <div class="box">
           <ul>
-            <li>AlwaysOnTop Funktion</li>
+            <li>Beschreibungsfeld im WordCounter auf 150 Zeichen beschränkt</li>
           </ul>
         </div>
       </div>

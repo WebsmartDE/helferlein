@@ -73,7 +73,7 @@
           break;
         case 'description':
           this.counterLengthMin = 50;
-          this.counterLengthMax = 300;
+          this.counterLengthMax = 150;
           break;
         case 'tags':
           this.counterLengthMin = 0;
