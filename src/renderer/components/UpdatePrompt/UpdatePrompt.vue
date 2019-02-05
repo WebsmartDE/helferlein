@@ -104,7 +104,7 @@
   }
   .version-body button:hover {
     cursor: pointer;
-    background: var(--colorPrimaryText);
+    background: transparent;
     color: var(--colorPrimary);
   }
   .version-body button:active {

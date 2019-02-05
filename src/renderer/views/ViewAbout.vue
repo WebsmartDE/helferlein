@@ -5,7 +5,7 @@
         <div class="header"><span>VERSION</span></div>
         <div class="box">
           <div class="versionNumber">2.5.0</div>
-          <div class="versionCode">Maurice Moss</div>
+          <div class="versionCode">S2E5 - Wettkampf der Wasser-Pokémon</div>
         </div>
       </div>
       <div class="item">
@@ -14,7 +14,7 @@
           <ul>
             <li>DarkMode ist hier!</li>
             <li>Hub Redesign</li>
-            <li>Versionscodes werden nun nach The IT-Crowd Charaktären benannt.</li>
+            <li>Die Versionscodes entsprechen nun der passenden Pokemon-Folge.</li>
           </ul>
         </div>
       </div>
