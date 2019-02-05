@@ -1,8 +1,11 @@
 <template>
   <div class="view">
-    <div v-if="hasUpdate == false">
-      <p>Dies ist Helferlein (früher Helferlein Tool), eine App um Bereiche der Produktion zu erleichtern. Neben einfachen Verlinkungen auf verschiedenste Projekte wie Google PageSpeed und Adobe Color CC gibt es zudem auch wertvolle SEO Tools wie den Wortzähler um deine Arbeit etwas zu erleichtern.</p>
-      <p>Dieses Projekt ist in stetiger Entwicklung. Solltest du dir weitere Funktionen wünschen oder Fehler auftreten, kannst dich an der unter "Über diese App" verlinkten E-Mail-Adresse wenden.</p>
+    <div v-if="hasUpdate == false" class="hub-grid">
+      <div>
+        <p>Willkommen in Helferlein, eine App um Bereiche der Produktion zu erleichtern. Neben einfachen Verlinkungen auf verschiedenste Projekte wie Google PageSpeed und Adobe Color CC gibt es zudem auch wertvolle SEO Tools wie den Wortzähler um deine Arbeit etwas zu erleichtern.</p>
+        <p>Dieses Projekt ist in stetiger Entwicklung. Solltest du dir weitere Funktionen wünschen oder Fehler auftreten, kannst dich an der unter "Über diese App" verlinkten E-Mail-Adresse wenden.</p>
+      </div>
+      <img src="static/illustration_hub.svg" />
     </div>
 
     <UpdatePrompt :url="newVersionUrl" :version="newVersion" v-if="hasUpdate == true" />
@@ -38,7 +41,7 @@
           .then(function(response) {
             return response.json();
           }).then(function(data) {
-            if(currentVersion != data.tag_name) {
+            if(currentVersion < data.tag_name) {
 
               this.newVersion = data.tag_name;
               this.newVersionUrl = data.assets[0].browser_download_url;
@@ -60,11 +63,24 @@
 p {
   margin: 0;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 14px;
   padding: 15px;
-  background: #fff;
+  background: var(--colorBoxBG);
+  color: var(--colorBoxFont);
   box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
   border-radius: 6px;
   margin-bottom: 15px;
+  transition: 0.2s ease all;
+}
+.hub-grid {
+  display: grid;
+  grid-template-columns: 325px 1fr;
+  grid-gap: 30px;
+}
+.hub-grid img {
+  width: 80%;
+  height: 80%;
+  align-self: center;
+  justify-self: center;
 }
 </style>

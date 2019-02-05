@@ -101,43 +101,6 @@
   grid-template-columns: 300px 1fr;
   grid-gap: 25px;
 }
-.header {
-  overflow: hidden;
-  position: relative;
-  margin-top: 15px;
-  padding-left: 30px;
-  font-weight: 700;
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.2em;
-  margin-bottom: 10px;
-}
-.header:after {
-  content: "";
-  height: 3px;
-  margin-top: 6px;
-  background: #f9a51b;
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-}
-.header span {
-  position: relative;
-  z-index: 2;
-  background: #f1f1f1;
-  padding: 0px 15px;
-}
-.box {
-  background: #fff;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
-  border-radius: 6px;
-  padding: 25px;
-  display: grid;
-  align-items: flex-start;
-  grid-gap: 15px;
-}
 .box .noText {
   padding: 25px 0px;
   text-align: center;
@@ -145,7 +108,8 @@
 }
 .box .noText .icon i {
   font-size: 32px;
-  color: #f9a61b;
+  transition: 0.2s ease all;
+  color: var(--colorPrimary);
 }
 .box .noText .icon {
   margin-bottom: 15px;
@@ -155,17 +119,9 @@
   font-size: 12px;
   text-transform: uppercase;
 }
-.box input, .box textarea {
-  border: 2px solid #ddd;
-  background: #fff;
-  padding: 15px;
-  font-family: 'Oxygen', sans-serif;
-  font-size: 14px;
-  border-radius: 6px;
-  transition: 0.15s ease all;
-}
 .box input:focus, .box textarea:focus {
-  border-color: #f9a51b;
+  transition: 0.2s ease all;
+  border-color: var(--colorPrimary);
   outline: 0;
 }
 .box .text textarea {
@@ -189,17 +145,19 @@
   height: 22px;
   display: block;
   border-radius: 6px;
-  background: rgba(0,0,0,0.1);
-  border: 2px solid transparent;
+  background: var(--colorShade);
+  border: 2px solid var(--colorInputOutlineGrey);
   cursor: pointer;
   color: transparent;
+  transition: 0.2s ease all;
 }
 .box .setting .settingCheckbox input[type="checkbox"] {
   display: none;
 }
 .box .setting .settingCheckbox input[type="checkbox"]:checked + span {
-  border-color: #f9a51b;
-  color: #000;
+  transition: 0.2s ease all;
+  border-color: var(--colorPrimary);
+  color: var(--colorBoxFont);
 }
 .box .setting input[type="number"] {
   padding-top: 5px;
@@ -214,9 +172,9 @@
 .box .generate button {
   width: 100%;
   text-transform: uppercase;
-  background: #f9a51b;
+  background: var(--colorPrimary);
   border: 2px solid transparent;
-  color: #fff;
+  color: var(--colorPrimaryText);
   font-size: 12px;
   border-radius: 6px;
   padding: 10px 0px;
@@ -226,13 +184,14 @@
   margin-right: 10px;
 }
 .box .generate button:hover {
-  background: #fff;
-  color: #f9a51b;
-  border-color: #f9a51b;
+  background: var(--colorPrimaryText);
+  color: var(--colorPrimary);
+  border-color: var(--colorPrimary);
   cursor: pointer;
 }
 .box .generate button:active {
-  background: #f1f1f1;
+  background: var(--colorPrimary);
+  color: var(--colorPrimaryText);
 }
 .box .generate button:focus {
   outline: 0;

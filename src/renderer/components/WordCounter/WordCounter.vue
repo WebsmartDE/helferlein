@@ -133,88 +133,13 @@
 </script>
 
 <style scoped>
-.header {
-  overflow: hidden;
-  position: relative;
-  margin-top: 15px;
-  padding-left: 30px;
-  font-weight: 700;
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.2em;
-  margin-bottom: 10px;
-}
-.header:after {
-  content: "";
-  height: 3px;
-  margin-top: 6px;
-  background: #f9a51b;
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-}
-.header span {
-  position: relative;
-  z-index: 2;
-  background: #f1f1f1;
-  padding: 0px 15px;
-}
-.header button {
-  position: absolute;
-  z-index: 2;
-  right: 30px;
-  font-size: 10px;
-  color: #fff;
-  font-weight: bold;
-  background: #f9a51b;
-  padding: 5px 15px;
-  border-left: 15px solid #f1f1f1;
-  border-right: 15px solid #f1f1f1;
-  top: -4px;
-  transition: 0.15s ease all;
-}
-.header button:hover {
-  background: #fff;
-  color: #f9a51b;
-  cursor: pointer;
-}
-.header button:active {
-  background: #eee;
-}
-.header button:focus {
-  outline: 0;
-}
-.box {
-  background: #fff;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
-  border-radius: 6px;
-  padding: 25px;
-  display: grid;
-  align-items: flex-start;
-  grid-gap: 15px;
-}
-.box input, .box textarea {
-  border: 2px solid #ddd;
-  background: #fff;
-  padding: 15px;
-  font-family: 'Oxygen', sans-serif;
-  font-size: 14px;
-  border-radius: 6px;
-  transition: 0.15s ease all;
-}
-.box input:focus, .box textarea:focus {
-  border-color: #f9a51b;
-  outline: 0;
-}
 .box .counterDetails {
   display: flex;
 }
 .box .counterDetails .counterLengthDetail {
   width: 200px;
-  background: rgba(0,0,0,0.05);
-  color: #000;
+  background: var(--colorShade);
+  color: var(--colorBoxFont);
   font-size: 12px;
   border-radius: 6px;
   padding: 10px 0px;
@@ -224,15 +149,15 @@
   margin-right: 10px;
 }
 .box .counterDetails .counterLengthDetail.counterLengthAmount--tooMany {
-  background: rgb(233, 30, 54);
+  background: var(--colorDanger);
   color: #fff;
 }
 .box .counterDetails .counterLengthDetail.counterLengthAmount--notEnough {
-  background: rgb(234, 172, 0);
+  background: var(--colorWarning);
   color: #fff;
 }
 .box .counterDetails .counterLengthDetail.counterLengthAmount--perfect {
-  background: rgb(139, 195, 74);
+  background: var(--colorSuccess);
   color: #fff;
 }
 

@@ -23,6 +23,7 @@
 <style scoped>
   .appbar-nav-item {
     display: flex;
+    color: var(--colorAppBarNavColor);
     justify-content: center;
     align-items: center;
     padding: 5px 10px;
@@ -51,8 +52,8 @@
     transition: 0.15s ease all;
   }
   .router-link-active .appbar-nav-item {
-    border-color: #f9a51b;
-    color: #f9a51b;
+    border-color: var(--colorPrimary);
+    color: var(--colorPrimary);
   }
   .router-link-active .appbar-nav-item i {
     opacity: 1;

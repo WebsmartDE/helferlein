@@ -3,11 +3,12 @@
     <div class="header-main">
       <div class="header-title">
         <span>Helferlein</span>
-        <div class="version">v2.3.0</div>
+        <div class="version">v2.5.0</div>
       </div>
 
       <aside>
         <AppBarToggleOnTopIcon icon="vector-arrange-above" tooltip="Immer über andere Fenster anzeigen" />
+        <AppBarToggleDarkMode icon="theme-light-dark" tooltip="Darkmode" />
         <AppBarIcon icon="information" tooltip="Über diese App" route="view-about" />
       </aside>
     </div>
@@ -24,6 +25,7 @@
 <script>
   import AppBarIcon from '@/components/AppBar/AppBarIcon';
   import AppBarToggleOnTopIcon from '@/components/AppBar/AppBarToggleOnTopIcon';
+  import AppBarToggleDarkMode from '@/components/AppBar/AppBarToggleDarkMode';
   import AppBarNavItem from '@/components/AppBar/AppBarNavItem';
 
   export default {
@@ -31,6 +33,7 @@
     components: {
       AppBarIcon,
       AppBarToggleOnTopIcon,
+      AppBarToggleDarkMode,
       AppBarNavItem
     }
   }
@@ -38,7 +41,8 @@
 
 <style scoped>
   header {
-    background: #fff;
+    transition: 0.2s ease all;
+    background: var(--colorAppBarBG);
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
     position: relative;
     z-index: 100;
@@ -59,10 +63,13 @@
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.05em;
+    transition: 0.2s ease all;
+    color: var(--colorAppBarBrand);
   }
   .header-main .header-title .version {
-    background: #f9a51b;
-    color: #fff;
+    transition: 0.2s ease all;
+    background: var(--colorPrimary);
+    color: var(--colorPrimaryText);
     font-size: 12px;
     font-weight: bold;
     padding: 0px 15px;
@@ -82,7 +89,7 @@
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
 
-    border-right:10px solid #f9a51b;
+    border-right:10px solid var(--colorPrimary);
   }
   .header-main aside {
     display: grid;

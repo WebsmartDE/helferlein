@@ -4,15 +4,17 @@
       <div class="item">
         <div class="header"><span>VERSION</span></div>
         <div class="box">
-          <div class="versionNumber">2.4.0</div>
-          <div class="versionCode">Lambent Beat</div>
+          <div class="versionNumber">2.5.0</div>
+          <div class="versionCode">Maurice Moss</div>
         </div>
       </div>
       <div class="item">
         <div class="header"><span>CHANGELOG</span></div>
         <div class="box">
           <ul>
-            <li>Beschreibungsfeld im WordCounter auf 150 Zeichen beschränkt</li>
+            <li>DarkMode ist hier!</li>
+            <li>Hub Redesign</li>
+            <li>Versionscodes werden nun nach The IT-Crowd Charaktären benannt.</li>
           </ul>
         </div>
       </div>
@@ -37,6 +39,7 @@
             <li>WebPack</li>
             <li>VueJS</li>
             <li>VueRouter</li>
+            <li>MaterialDesignIcons</li>
           </ul>
         </div>
       </div>
@@ -63,43 +66,15 @@
   display: grid;
   grid-gap: 25px;
 }
-.header {
-  overflow: hidden;
-  position: relative;
-  margin-top: 15px;
-  padding-left: 30px;
-  font-weight: 700;
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.2em;
-  margin-bottom: 10px;
-}
-.header:after {
-  content: "";
-  height: 3px;
-  margin-top: 6px;
-  background: #f9a51b;
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-}
-.header span {
-  position: relative;
-  z-index: 2;
-  background: #f1f1f1;
-  padding: 0px 15px;
-}
 .textBig {
   font-size: 26px;
   line-height: 1;
   font-weight: 300;
 }
 .box a {
-  background: #f9a51b;
+  background: var(--colorPrimary);
   border: 2px solid transparent;
-  color: #fff;
+  color: var(--colorPrimaryText);
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
@@ -109,21 +84,13 @@
   transition: 0.15s ease all;
 }
 .box a:hover {
-  background: #fff;
-  border-color: #f9a51b;
-  color: #f9a51b;
+  background: transparent;
+  border-color: var(--colorPrimary);
+  color: var(--colorPrimary);
 }
 .box a:active {
-  background: #f1f1f1;
-}
-.box {
-  background: #fff;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
-  border-radius: 6px;
-  padding: 25px;
-  display: grid;
-  align-items: flex-start;
-  grid-gap: 15px;
+  background: var(--colorPrimary);
+  color: var(--colorPrimaryText);
 }
 .box ul {
   padding: 0px 15px;

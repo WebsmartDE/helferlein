@@ -56,8 +56,8 @@
     display: block;
   }
   .version-body .header .version {
-    background: #f9a51b;
-    color: #fff;
+    background: var(--colorPrimary);
+    color: var(--colorPrimaryText);
     font-size: 30px;
     font-weight: bold;
     padding: 0px 30px;
@@ -82,7 +82,7 @@
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
 
-    border-right:10px solid #f9a51b;
+    border-right:10px solid var(--colorPrimary);
   }
   .version-body p {
     font-size: 16px;
@@ -92,9 +92,9 @@
     margin: 30px 0px;
   }
   .version-body button {
-    background: #f0a51b;
-    border: 2px solid #f9a51b;
-    color: #fff;
+    background: var(--colorPrimary);
+    border: 2px solid var(--colorPrimary);
+    color: var(--colorPrimaryText);
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
@@ -104,11 +104,12 @@
   }
   .version-body button:hover {
     cursor: pointer;
-    background: #fff;
-    color: #f0a51b;
+    background: var(--colorPrimaryText);
+    color: var(--colorPrimary);
   }
   .version-body button:active {
-    background: #eee;
+    border: 2px solid var(--colorPrimary);
+    color: var(--colorPrimaryText);
   }
   .version-body button:focus {
     outline: 0;
