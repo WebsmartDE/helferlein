@@ -20,7 +20,7 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Concert+One|Oxygen:300,400,700|Raleway:700');
-@import url('https://cdn.materialdesignicons.com/3.4.93/css/materialdesignicons.min.css');
+@import url('https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css');
 
 :root {
   --colorAppBarBG: #fff;

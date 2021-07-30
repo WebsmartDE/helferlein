@@ -21,6 +21,11 @@ export default new Router({
       component: require('@/views/ViewGooglePagespeed').default
     },
     {
+      path: '/tools',
+      name: 'view-tools',
+      component: require('@/views/ViewTools').default
+    },
+    {
       path: '/loremipsum',
       name: 'view-loremipsum',
       component: require('@/views/ViewLoremIpsum').default

@@ -3,7 +3,7 @@
     <div class="header-main">
       <div class="header-title">
         <span>Helferlein</span>
-        <div class="version">v2.6.0</div>
+        <div class="version">v2.6.3</div>
       </div>
 
       <aside>
@@ -16,6 +16,7 @@
       <AppBarNavItem icon="home" route="view-hub" text="Hub" />
       <AppBarNavItem icon="tag" route="view-wordcounter" text="Wortzähler" />
       <AppBarNavItem icon="speedometer" route="view-googlepagespeed" text="Google PageSpeed" />
+      <AppBarNavItem icon="tools" route="view-tools" text="Websmart Tools" />
       <AppBarNavItem icon="message-text" route="view-loremipsum" text="LoremIpsum Generator" />
       <AppBarNavItem icon="palette" route="view-adobecolorcc" text="Adobe Color CC" />
       <AppBarNavItem icon="dns" route="view-mxtoolbox" text="MXToolbox" />

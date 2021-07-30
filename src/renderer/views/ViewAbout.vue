@@ -4,7 +4,7 @@
       <div class="item">
         <div class="header"><span>VERSION</span></div>
         <div class="box">
-          <div class="versionNumber">2.6.2</div>
+          <div class="versionNumber">2.6.3</div>
           <div class="versionCode">S2E6 - Der Aufstand</div>
         </div>
       </div>
@@ -12,8 +12,9 @@
         <div class="header"><span>CHANGELOG</span></div>
         <div class="box">
           <ul>
-            <li>MXToolbox ist nun in der Navigation zu finden!</li>
-			<li>Anpassungen für den Dark-Mode</li>
+            <li>Anpassungen an der "Über" Seite</li>
+			      <li>Anpassungen für den Dark-Mode</li>
+            <li>Neue Seite "Websmart Tools"</li>
           </ul>
         </div>
       </div>
